@@ -40,10 +40,12 @@ public class ParkingApp {
                     case 3:
                         System.out.println("\n");
                         if(checkOut.getTotalCheckInsWithTicket() > 0){
-                            System.out.println("Ya had  " + checkOut.getTotalCheckInsWithTicket() + " Check Ins, and a grand total of " + n.format(checkOut.getTotalWithTicket()) + " was made.\n");
+                            System.out.println("Ya had  " + checkOut.getTotalCheckInsWithTicket() + " Check Ins, and a grand total of " +
+                                    n.format(checkOut.getTotalWithTicket()) + " was made.\n");
                         }
                         if(checkOut.getTotalCheckInsWithoutTicket() > 0){
-                            System.out.println("From " + checkOut.getTotalCheckInsWithoutTicket() + " Lost Tickets, a total of " + n.format(checkOut.getTotalWithoutTicket()) + " was made.\n");
+                            System.out.println("From " + checkOut.getTotalCheckInsWithoutTicket() + " Lost Tickets, a total of " +
+                                    n.format(checkOut.getTotalWithoutTicket()) + " was made.\n");
                         }
                         System.out.println("Grand Total for the day was " + n.format(checkOut.getTotalWithTicket() + checkOut.getTotalWithoutTicket()));
                         a = true;
