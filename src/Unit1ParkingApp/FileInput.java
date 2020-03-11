@@ -10,15 +10,15 @@ public class FileInput {
 
     public void getAllIds(List<Ticket> tickets) throws IOException {
         try{
-            BufferedReader inFile = new BufferedReader(new FileReader("Tickets.txt"));
-            String line = inFile.readLine();
+            BufferedReader brFile = new BufferedReader(new FileReader("Tickets.txt"));
+            String line = brFile.readLine();
             while (line != null){
                 String[] splitStr = line.split(": ");
                 Ticket newTicket = new Ticket(Integer.parseInt(splitStr[1]));
                 tickets.add(newTicket);
-                line = inFile.readLine();
+                line = brFile.readLine();
             }
-            inFile.close();
+            brFile.close();
         }catch(FileNotFoundException e){
             System.out.println("Hmm, says File Not Found Boss. Maybe you typed the filename wrong?.");
         }catch(IOException e){
